@@ -1,0 +1,718 @@
+body {
+    background: black no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+    justify-content: center;
+  }
+  
+  .card-container {
+    display: grid;
+    grid-auto-rows: 2.7fr;
+    grid-template-columns: repeat(auto-fill, minmax(312px, 1fr));
+    max-width: 1248px;
+    margin: auto;
+  }
+
+  .glitchcrown {
+    right: -50px;
+    top: -55px;
+    }
+  
+  @media screen and (max-width: 1264px) {
+    .card-container {
+      max-width: 936px;
+    }
+    .glitchcrown {
+      right: -50px;
+      top: -55px;
+      }
+  }
+  
+  @media screen and (max-width: 952px) {
+    .card-container {
+      max-width: 624px;
+    }
+    .glitchcrown {
+    right: -50px;
+    top: -55px;
+    }
+  }
+  
+  .card {
+    position: relative;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    border-radius: 14px;
+    text-align: center;
+    background: var(--back);
+    display: grid;
+    grid-template-columns: 280px;
+    grid-template-rows: 2fr 0.7fr;
+    width: 280px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    transition: 0.5s ease;
+    margin: 16px;
+    min-width: 250px;
+  }
+  
+  @media screen and (max-width: 640px) {
+
+    .glitchcrown {
+      right: -85px;
+      top: -55px;
+    }
+
+    .card {
+      width: 100%;
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+  
+    .card-container {
+      grid-template-columns: calc(100% - 32px);
+      width: calc(100% - 32px);
+    }
+
+  }
+  
+  /* .card.light:nth-last-of-type(odd),
+  .card.dark:nth-last-of-type(even) {
+    --fore: white;
+    --back: rgba(18, 18, 49, 0.987);
+  }
+  
+  .card.light:nth-last-of-type(even),
+  .card.dark:nth-last-of-type(odd) {
+    --fore: black;
+    --back: white;
+  } */
+  
+  .card .card-header {
+    position: absolute;
+    border-radius: 14px;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 16px;
+  }
+  
+  .card-header i {
+    color: var(--fore);
+  }
+  
+  .card-header .options > i {
+    margin-left: 10px;
+  }
+  
+  .card .card-text {
+    height: fit-content;
+    width: 250px;
+    margin: auto;
+    margin-top: 72px;
+  }
+  
+  .card-text .card-img {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    background-size: cover;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 2px 5px 15px rgb(0 0 0 / 90%);
+  }
+  
+  .card-img i {
+    position: absolute;
+    bottom: 6px;
+    right: 4px;
+    background: linear-gradient(90deg, #d400ff 0%, #d108a5 36%, #ff006a 100%);
+    border-radius: 15px;
+  }
+  
+  .card-text h2 {
+    margin: 8px;
+    margin-bottom: 2px;
+    font-size: 18px;
+  }
+  
+  .card-text h5 {
+    margin: 0;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .card-text p {
+    font-weight: 400;
+    font-size: 13px;
+    margin: 12px auto;
+    width: 180px;
+  }
+  
+  .card-text button {
+    border-radius: 20px;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px;
+    width: 180px;
+    font-weight: 700;
+    color: white;
+    margin-top: 20px;
+    background-image: linear-gradient(
+      90deg,
+      #d400ff 0%,
+      #d108a5 36%,
+      #ff006a 100%
+    );
+  }
+  
+  .card-stats {
+    display: flex;
+    justify-content: space-around;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    padding: 4px 16px;
+  }
+  
+  .card-stats .stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 0;
+    color: var(--fore);
+  }
+  
+  .card-stats .type {
+    font-size: 9px;
+    font-weight: 400;
+    color: grey;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  .card-stats .value {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .socials i {
+    margin-left: 10px;
+    font-size: 24px;
+    background-clip: text;
+    background: -webkit-linear-gradient(0deg, #d400ff 0%, #ff006a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  svg {
+  fill: #F20B97;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+    z-index: 10;
+  }
+
+  /* background images */
+
+  .karmab {
+    display: flex;
+    position: relative;
+    height: 35%;
+    width: 100%;
+    background: url("https://cdn.discordapp.com/attachments/850053805244284948/979310106187558952/tom_commission_banner.png"); /* The image used */
+    background-color: #5c1776;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+  }
+
+  .farleyb {
+    display: flex;
+    position: relative;
+    height: 35%;
+    width: 100%;
+    background: url("https://cdn.discordapp.com/attachments/973804410255839273/979504112376881183/unknown.png"); /* The image used */
+    background-color: #5c1776;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+  }
+
+  .glitchb {
+    display: flex;
+    position: relative;
+    height: 35%;
+    width: 100%;
+    background: url("https://cdn.discordapp.com/attachments/771498815832195075/979551559836909618/82BC9B93-C415-4B40-8092-1BC8392F487F.jpg"); /* The image used */
+    background-color: #5c1776;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+  }
+
+  .spriteb {
+    display: flex;
+    position: relative;
+    height: 35%;
+    width: 100%;
+    background: url("https://cdn.discordapp.com/attachments/939322159858339910/979567281866678292/c516b7680f10df4cbd321767557d9170.jpg"); /* The image used */
+    background-color: #5c1776;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+  }
+
+  .xenob {
+    display: flex;
+    position: relative;
+    height: 35%;
+    width: 100%;
+    background: url("https://cdn.discordapp.com/attachments/928774382380286023/979575371425001472/random.gif"); /* The image used */
+    background-color: darkblue;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+  }
+
+  .nobodyb {
+    display: flex;
+    position: relative;
+    height: 35%;
+    width: 100%;
+    background: url("https://cdn.discordapp.com/attachments/966062305093767188/979473167338831952/Java-runtime-beta_Screenshot_2022.05.26_-_21.56.11.01.png"); /* The image used */
+    background-color: #5c1776;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+  }
+
+  .Arc3neb {
+    display: flex;
+    position: relative;
+    height: 35%;
+    width: 100%;
+    background: url("https://cdn.discordapp.com/attachments/862095925760360458/979347510860611614/IMG_20210605_055641793.jpg"); /* The image used */
+    background-color: #5c1776;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+  }
+
+  .faithb {
+    display: flex;
+    position: relative;
+    height: 35%;
+    width: 100%;
+    background: url("https://cdn.discordapp.com/attachments/931740672686436433/979491532245712957/IMG_6930.jpg"); /* The image used */
+    background-color: #5c1776;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+  }
+
+  .weirdob {
+    display: flex;
+    position: relative;
+    height: 35%;
+    width: 100%;
+    background: url("https://cdn.discordapp.com/attachments/974021336156499968/979346339743826000/unknown.png"); /* The image used */
+    background-color: #5c1776;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+  }
+
+  .epicb {
+    display: flex;
+    position: relative;
+    height: 35%;
+    width: 100%;
+    background: url("https://cdn.discordapp.com/attachments/931629764417048638/979581288371593287/IMG_2749.jpg"); /* The image used */
+    background-color: pink;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+  }
+
+  .tenzb {
+    display: flex;
+    position: relative;
+    height: 35%;
+    width: 100%;
+    background: url("https://cdn.discordapp.com/attachments/748941491120111626/979978609575993434/20220528_2022_05_28_01_25_03.gif"); /* The image used */
+    background-color: #9b1c31;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    
+  }
+
+  .slattb {
+    display: flex;
+    position: relative;
+    height: 35%;
+    width: 100%;
+    background: url("https://cdn.discordapp.com/attachments/942314364936024104/979934015287099442/IMG_2893.webp"); /* The image used */
+    background-color: linear-gradient(to bottom, red, black);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+  }
+
+  .roseb {
+    display: flex;
+    position: relative;
+    height: 35%;
+    width: 100%;
+    background: url("https://cdn.discordapp.com/attachments/873634605205422083/980234681264005140/minus-infinite-social-credit-china.gif"); /* The image used */
+    background-color: linear-gradient(black);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+  }
+
+  .templateb {
+    display: flex;
+    position: relative;
+    height: 35%;
+    width: 100%;
+    background: url(""); /* The image used */
+    background-color: linear-gradient(to bottom, white);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+  }
+
+  .laneyb {
+    display: flex;
+    position: relative;
+    height: 35%;
+    width: 100%;
+    background: url("https://cdn.discordapp.com/attachments/746514101680734248/979337773137952788/20220526-1_2022_05_26_06_58_21.gif"); /* The image used */
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+  /*background image end*/
+
+  }
+
+  /* pfp image */
+
+  .karmap {
+    background: url("https://cdn.discordapp.com/attachments/850053805244284948/979313041810276392/Snapchat-1565009510.jpg");
+  }
+
+  .nobodyp {
+    background: url("https://cdn.discordapp.com/attachments/748941491120111626/979481030216011897/599ed31c039c9ff28ae1fa14374c2636.png");
+  }
+
+  .arc3nep {
+    background: url("https://cdn.discordapp.com/attachments/862095925760360458/979486196893884436/IMG_2458.jpg");
+  }
+
+  .faithp {
+    background: url("https://cdn.discordapp.com/attachments/748941491120111626/979491768951267428/cbf030d25efd2a716e2ec83f282ac652.png");
+  }
+
+  .weirdop {
+    background: url("https://cdn.discordapp.com/attachments/974021336156499968/979344778711937064/unknown.png");
+  }
+
+  .epicp {
+    background: url("https://cdn.discordapp.com/attachments/748941491120111626/979588442893742100/b3659c595dfd43502dec2c2aa4cb05e1.png");
+  }
+
+  .tenzp {
+    background: url("https://cdn.discordapp.com/attachments/748941491120111626/979978237218287616/1b1bf4fcd0e859ed4a66eb95d4aa2ae0.png");
+  }
+
+  .slattp {
+    background: url("https://cdn.discordapp.com/attachments/942314364936024104/979934086229532672/CAC58D32-CA54-4816-9DB8-FF12B29DB7C5.jpg");
+  }
+
+  .rosep {
+    background: url("https://cdn.discordapp.com/attachments/873634605205422083/980234390401605642/Opera_Snapshot_2022-05-28_182007_fineartamerica.com.png");
+  }
+
+  .templatep {
+    background: url("https://cdn.discordapp.com/attachments/862095925760360458/980232022087852042/plus-icon-black-2.png");
+  }
+
+  .farleyp {
+    background: url("https://cdn.discordapp.com/attachments/973804410255839273/979504406162706452/607f55214c76a96f81ec7c9932f4ef69.jpg");
+  }
+
+  .glitchp {
+    background: url("https://cdn.discordapp.com/attachments/748941491120111626/979541596833976380/09a8b6919ef5fb4902bbf55fb169a930.png");
+  }
+
+  .spritep {
+    background: url("https://cdn.discordapp.com/attachments/746514101680734248/979567007630524427/795079292d350f81933094e539357bfd.png");
+  }
+
+  .xenop {
+    background: url("https://media.discordapp.net/attachments/928774382380286023/979573023801761832/ezgif-3-3ada847a54.gif");
+  }
+
+  /* bg colors */
+
+  .bgpink {
+    background-image: linear-gradient(to left, violet, indigo);
+  }
+
+  .arc3nenc {
+    color: #ff82dc;
+  }
+
+  .bgkarma {
+    background-color: black;
+    border-color: white;
+    border-radius: 5px;
+    border-style: groove;
+  } 
+
+  .bgfarley {
+    background-color: black;
+    border-color: white;
+    border-radius: 5px;
+    border-style: hidden;
+  } 
+
+  .bgglitch {
+    background-color: rgb(230, 172, 182);
+    border-color: #e75480;
+    border-radius: 5px;
+    border-style: solid;
+  } 
+
+  .bgsprite {
+    background-color: black;
+    border-color: lime;
+    border-radius: 5px;
+    border-style: solid;
+    background-position: center;
+    background-size: 100%;
+  } 
+
+  .bgxeno {
+    background-image: url(https://cdn.discordapp.com/attachments/928774382380286023/979575371425001472/random.gif);
+    border-color: lime;
+    border-radius: 5px;
+    border-style: hidden;
+    background-position: center;
+    background-size: 100%;
+  } 
+
+  .bgnobody {
+    background-color: black;
+    border-color: #8b0000;
+    border-radius: 5px;
+    border-style: double;
+  }
+  
+  .bglaney {
+    background-color: #381413;
+    border-color: #682c2a;
+    border-radius: 2px;
+    border-style: solid;
+  }
+
+  .bgArc3ne {
+    background-color: #6432dc;
+    border-radius: 1px;
+    border-style: hidden;
+  }
+
+  .bgfaith {
+    background-color: #565656;
+    border-radius: 1px;
+    border-style: hidden;
+  }
+
+  .bgweirdo {
+    background-color: #21082e;
+    border-radius: 1px;
+    border-style: hidden;
+  }
+
+  .bgepic {
+    background-color: pink;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #a7e6ff;
+  }
+
+  .bgtenz {
+    background-color: #9b1c31;
+    border-radius: 5px;
+    border-style: hidden;
+    border-color: #a7e6ff;
+  }
+
+  .bgslatt {
+    background-image: linear-gradient(black);
+    border-radius: 5px;
+    border-style: solid;
+    border-color: red;
+  }
+
+  .bgrose {
+    background-color: #fc0366;
+    border-radius: 5px;
+    border-style: hidden;
+    border-color: red;
+  }
+
+  .bgtemplate {
+    background-color: white;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: white;
+  }
+
+  .karmat {
+    color: white;
+  }
+
+  /* bg colors */
+
+  /* rainbow text */
+  .rainbow {
+   
+    /* Chrome, Safari, Opera */
+   -webkit-animation: rainbow 5s infinite; 
+   
+   /* Internet Explorer */
+   -ms-animation: rainbow 5s infinite;
+   
+   /* Standar Syntax */
+   animation: rainbow 5s infinite; 
+ }
+ 
+ /* Chrome, Safari, Opera */
+ @-webkit-keyframes rainbow{
+   0%{color: orange;}	
+   10%{color: purple;}	
+   20%{color: red;}
+   30%{color: CadetBlue;}
+   40%{color: yellow;}
+   50%{color: coral;}
+   60%{color: green;}
+   70%{color: cyan;}
+   80%{color: DeepPink;}
+   90%{color: DodgerBlue;}
+   100%{color: orange;}
+ }
+ 
+ /* Internet Explorer */
+ @-ms-keyframes rainbow{
+    0%{color: orange;}	
+   10%{color: purple;}	
+   20%{color: red;}
+   30%{color: CadetBlue;}
+   40%{color: yellow;}
+   50%{color: coral;}
+   60%{color: green;}
+   70%{color: cyan;}
+   80%{color: DeepPink;}
+   90%{color: DodgerBlue;}
+   100%{color: orange;}
+ }
+ 
+ /* Standar Syntax */
+ @keyframes rainbow{
+     0%{color: orange;}	
+   10%{color: purple;}	
+   20%{color: red;}
+   30%{color: CadetBlue;}
+   40%{color: yellow;}
+   50%{color: coral;}
+   60%{color: green;}
+   70%{color: cyan;}
+   80%{color: DeepPink;}
+   90%{color: DodgerBlue;}
+   100%{color: orange;}
+ }
+
+ .white {
+   color: white;
+ }
+
+ .black {
+   color: black;
+ }
+
+.laneyp {
+  background: url("https://cdn.discordapp.com/attachments/974897219520057415/979333734245494844/IMG_7359.JPG");
+}
+
+.grey {
+  color: rgb(43, 43, 43);
+}
+
+.glitchcrown {
+  display: flex;
+  position: relative;
+  height: 35%;
+  width: 35%;
+  background: url("https://cdn.discordapp.com/attachments/771498815832195075/979561386143260702/f1682f089c.png"); /* The image used */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 2;
+  transform: rotate(35deg);
+}
+
+.epiccloud {
+  display: flex;
+  position: relative;
+  height: 80%;
+  width: 80%;
+  background: url("https://cdn.discordapp.com/attachments/746514101680734248/979590190295302154/tumblr_ma10k56a4q1rfjowdo1_500.gif"); /* The image used */
+  background-position: center;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -80px;
+  left: 25px;
+  z-index: 2;
+}

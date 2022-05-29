@@ -3,6 +3,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     justify-content: center;
+    overflow-x: hidden;
   }
   
   .card-container {

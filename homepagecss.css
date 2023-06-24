@@ -30,6 +30,40 @@ body {
     z-index: 2;
   }
 
+  .lostfrog1 {
+    display: flex;
+    position: relative;
+    height: 15%;
+    width: 15%;
+    background: url("https://cdn.discordapp.com/attachments/983991380839911424/988011699196006470/frog-cute.gif"); /* The image used */
+    background-position: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0px;
+    left: -5px;
+    z-index: 2;
+    transform: rotate(25deg);
+  }
+
+  .lostfrog2 {
+    display: flex;
+    position: relative;
+    height: 15%;
+    width: 15%;
+    background: url("https://cdn.discordapp.com/attachments/983991380839911424/988011699196006470/frog-cute.gif"); /* The image used */
+    background-position: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: -3px;
+    right: 0;
+    z-index: 2;
+    transform: rotate(-25deg);
+  }
+
   .glitchcrown {
     right: -50px;
     top: -55px;
@@ -428,6 +462,20 @@ body {
 
   }
 
+  .lostb {
+    display: flex;
+    position: relative;
+    height: 35%;
+    width: 100%;
+    background: url("https://cdn.discordapp.com/attachments/983991380839911424/988015307966783538/Give-Me-Money.jpg"); /* The image used */
+    background-color: linear-gradient(black);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+  }
+
   .templateb {
     display: flex;
     position: relative;
@@ -493,6 +541,10 @@ body {
 
   .rosep {
     background: url("https://cdn.discordapp.com/attachments/873634605205422083/980234390401605642/Opera_Snapshot_2022-05-28_182007_fineartamerica.com.png");
+  }
+
+  .lostp {
+    background: url("https://cdn.discordapp.com/attachments/983991380839911424/988014959034269716/1e3ebf9aa59fa218d344f49c7685f8be.jpg");
   }
 
   .templatep {
@@ -619,6 +671,13 @@ body {
 
   .bgrose {
     background-color: #fc0366;
+    border-radius: 5px;
+    border-style: hidden;
+    border-color: red;
+  }
+
+  .bglost {
+    background-color: purple;
     border-radius: 5px;
     border-style: hidden;
     border-color: red;
